@@ -294,7 +294,9 @@ export default {
         this.users1 = []
     },
     checkIn(val) {
-      console.log(val.toISOString().slice(0, 10));
+      //console.log(val.toLocaleString().slice(0, 10).replaceAll("/", "-"));
+      var d = val.toLocaleString().split(",");
+      console.log(d[0].replaceAll("/", "-"));
       this.dates.in = val.toISOString().slice(0, 10);
     },
     checkOut(val) {
