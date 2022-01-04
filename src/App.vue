@@ -71,10 +71,11 @@
                                             <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal2">
                                              <!-- <button type="button" class="btn btn-info">Info</button> -->
                                                 <span>Departing on</span>
-                                                <span id="p2">Departing on</span>
+                                                <span id="p2">{{ dates.in }}</span>
                                                 <hr>
                                                 <!-- <HotelDatePicker /> -->
-                                                <span id="p2">Returning on</span>
+                                                <span>Returning on</span>
+                                                <span id="p2">{{ dates.out }}</span>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
@@ -209,7 +210,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
               </div>
               <div class="modal-body">
-                <HotelDatePicker />
+                <HotelDatePicker @check-in-changed="checkIn" @check-out-changed="checkOut"/>
               </div>
             </div>
           </div>
@@ -241,6 +242,10 @@ export default {
       cty1: "Dhaka",
       ita1: "DAC",
       users1: [],
+      dates: {
+        in: null,
+        out: null
+      }
 
     }
   },
@@ -288,6 +293,14 @@ export default {
         this.ita1 = user1.iata
         this.users1 = []
     },
+    checkIn(val) {
+      console.log(val.toISOString().slice(0, 10));
+      this.dates.in = val.toISOString().slice(0, 10);
+    },
+    checkOut(val) {
+      console.log(val.toISOString().slice(0, 10));
+      this.dates.out = val.toISOString().slice(0, 10);
+    }
     
   }
 }
