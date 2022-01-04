@@ -55,16 +55,16 @@
                                             <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal">
                                                 <!-- <button type="button" class="btn btn-info">Info</button> -->
                                                 <p>Leaving from</p>
-                                                <p id="p1">Leaving</p>
-                                                <span id="p2">Leaving from</span>
+                                                <p id="p1">{{ ita }}</p>
+                                                <span id="p2">{{ cty }}</span>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
                                             <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal1">
                                                 <!-- <button type="button" class="btn btn-info">Info</button> -->
                                                  <p>Going to</p>
-                                                 <p id="p1">{{ ita }}</p>
-                                                <span id="p2">{{ cty }}</span>
+                                                 <p id="p1">{{ ita1 }}</p>
+                                                <span id="p2">{{ cty1 }}</span>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
@@ -182,15 +182,15 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Going to"
-        v-model="uname"
-        @input="getUser"
+        placeholder="Leaving from"
+        v-model="uname1"
+        @input="getUser1"
       />
     </div>
     <div>
      <ul class="">
-          <p @click="setState(user)" v-for="user in users" :key="user.n">
-            {{ user.name }}
+          <p @click="setState1(user1)" v-for="user1 in users1" :key="user1.n">
+            {{ user1.name }}
           </p>
         </ul>  
     </div>
@@ -236,7 +236,12 @@ export default {
       uname: "",
       cty: "Dhaka",
       ita: "DAC",
-      users: []
+      users: [],
+      uname1: "",
+      cty1: "Dhaka",
+      ita1: "DAC",
+      users1: [],
+
     }
   },
   methods: {
@@ -259,6 +264,29 @@ export default {
         this.uname = user.name
         this.cty = user.city
         this.ita = user.iata
+        this.users = []
+    },
+
+    getUser1() {
+        console.log(this.uname1)
+        axios.get("https://api.sharetrip.net/api/v1/flight/search/airport?name=" + this.uname1)
+        .then(res => {
+                //console.log("axios")
+                console.log(res.data)
+                this.users1 = res.data.response;
+                
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+    },
+
+    setState1(user1){
+        console.log(user1)
+        this.uname1 = user1.name
+        this.cty1 = user1.city
+        this.ita1 = user1.iata
+        this.users1 = []
     },
     
   }
