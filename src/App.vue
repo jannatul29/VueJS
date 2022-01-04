@@ -63,8 +63,8 @@
                                             <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal1">
                                                 <!-- <button type="button" class="btn btn-info">Info</button> -->
                                                  <p>Going to</p>
-                                                 <p id="p1">Leaving</p>
-                                                <span id="p2" v-model="unme">Leaving from</span>
+                                                 <p id="p1">{{ ita }}</p>
+                                                <span id="p2">{{ cty }}</span>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
@@ -130,6 +130,77 @@
             </div>
         </section>
 
+
+          <div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Select a departure city</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Leaving from"
+        v-model="uname"
+        @input="getUser"
+      />
+    </div>
+    <div>
+     <ul class="">
+          <p @click="setState(user)" v-for="user in users" :key="user.n">
+            {{ user.name }}
+          </p>
+        </ul>  
+    </div>
+
+  </div>
+      </div>
+
+    </div>
+  </div>
+  
+<div class="modal" id="myModal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Select a departure city</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Going to"
+        v-model="uname"
+        @input="getUser"
+      />
+    </div>
+    <div>
+     <ul class="">
+          <p @click="setState(user)" v-for="user in users" :key="user.n">
+            {{ user.name }}
+          </p>
+        </ul>  
+    </div>
+  </div>
+      </div>
+
+    </div>
+  </div>
+
+
         <div class="modal" id="myModal2">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -160,15 +231,36 @@ export default {
   // components: {
   //   Datepicker
   // },
-  data: function () {
+  data: function() {
     return {
-      customDate: new Date()
+      uname: "",
+      cty: "Dhaka",
+      ita: "DAC",
+      users: []
     }
   },
-  mounted () {
-    axios
-      .get('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => (this.info = response))
+  methods: {
+    getUser() {
+        console.log(this.uname)
+        axios.get("https://api.sharetrip.net/api/v1/flight/search/airport?name=" + this.uname)
+        .then(res => {
+                //console.log("axios")
+                console.log(res.data)
+                this.users = res.data.response;
+                
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+    },
+
+    setState(user){
+        console.log(user)
+        this.uname = user.name
+        this.cty = user.city
+        this.ita = user.iata
+    },
+    
   }
 }
 </script>

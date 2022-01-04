@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="modal" id="myModal">
+  <div class="modal" id="myModal3">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -35,7 +35,7 @@
     </div>
   </div>
   
-<div class="modal" id="myModal1">
+<div class="modal" id="myModal4">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -75,36 +75,34 @@
 import axios from "axios";
 
 export default {
-  data: function() {
-    return {
-      uname: "",
-      unme: "",
-      users: []
-    }
-  },
+  // data: function() {
+  //   return {
+  //     uname: "",
+  //     users: []
+  //   }
+  // },
 
-  methods: {
-    getUser() {
-        console.log(this.uname)
-        axios.get("https://api.sharetrip.net/api/v1/flight/search/airport?name=" + this.uname)
-        .then(res => {
-                console.log("axios")
-                console.log(res.data)
-                this.users = res.data.response;
+  // methods: {
+  //   getUser() {
+  //       console.log(this.uname)
+  //       axios.get("https://api.sharetrip.net/api/v1/flight/search/airport?name=" + this.uname)
+  //       .then(res => {
+  //               console.log("axios")
+  //               console.log(res.data)
+  //               this.users = res.data.response;
                 
-        })
-        .catch((err) => {
-            console.log(err)
-        });
-    },
+  //       })
+  //       .catch((err) => {
+  //           console.log(err)
+  //       });
+  //   },
 
-    setState(user){
-        console.log(user)
-        this.uname = user.name
-        this.props.uname = user.name
-    },
+  //   setState(user){
+  //       console.log(user)
+  //       this.uname = user.name
+  //   },
     
-  }
+  // }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
