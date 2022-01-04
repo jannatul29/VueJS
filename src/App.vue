@@ -1,0 +1,239 @@
+<template>
+    <div id="app">
+      <nav class="container navbar navbar-expand-lg navbar-light bg-light" id="nav">
+          <a class="navbar-brand" href="#">Logo Here</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <div class="navbar-nav ms-auto">
+                    <router-link to="/" class="nav-item nav-link">Offers</router-link>
+                    <router-link to="/About" class="nav-item nav-link">Manage</router-link>
+                    <router-link to="#" class="nav-link">Experience</router-link>
+                    <router-link to="/About" class="nav-link">Marco Polo Club</router-link>
+                </div>
+            </div>
+      </nav>
+      <section id="featured-services" class="featured-services">
+            <div class="container">
+                <div class="row no-gutters" id="r1">
+                    <div class="col-lg-11 col-md-6">
+                      <div style="background-color: gainsboro;">
+                        <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters" style="width: 1450px; text-align: left; height: 90px;">
+                    <div class="col-lg-11 col-md-6" >
+                      <div style="padding: 30px 0px 10px 0px">
+                        <span style="font-size: 30px; font-weight: normal;">Ready for your next trip? Book with us now. </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="row no-gutters" id="r1">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="row no-gutters">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="card" id="c1">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-6 p-0">
+                                            <div>
+                                                Flights
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <hr>
+                                     <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-6 p-0">
+                                            <div>
+                                                <a  href="#" id="a1">Rendom flights</a><span id="s1"></span><a  href="#" id="a1">Multi-city/stopover</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters" >
+                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
+                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal">
+                                                <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                                <p>Leaving from</p>
+                                                <p id="p1">Leaving</p>
+                                                <span id="p2">Leaving from</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
+                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                                <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                                 <p>Going to</p>
+                                                 <p id="p1">Leaving</p>
+                                                <span id="p2" v-model="unme">Leaving from</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
+                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal2">
+                                             <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                                <span>Departing on</span>
+                                                <span id="p2">Departing on</span>
+                                                <hr>
+                                                <!-- <HotelDatePicker /> -->
+                                                <span id="p2">Returning on</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
+                                            <div class="btn btn-info" type="button" id="c3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-6 p-0">
+                                            <div>
+                                                <a  href="#" id="a1">Return<i class="bi bi-chevron-down"></i></a><span id="s1"></span><a  href="#" id="a1">Economy, 1 Audlt<i class="bi bi-chevron-down"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters" style="padding: 20px 0px 0px 0px;">
+                            <div class="col-lg-12 col-md-6">
+                                <div id="d1">
+                                    <div class="row no-gutters" id="r3">
+                                        <div class="col-lg-3 col-md-6 p-0">
+                                          <div class="icon-box" id="i1">
+
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0">
+                                          <div class="icon-box" id="i1">
+                                            <br><br>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0">
+                                          <div class="icon-box" id="i1">
+                                            <br><br>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 p-0">
+                                          <div class="icon-box" id="i1">
+                                            <br><br>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <!-- <div class="icon-box" style="background-image: url(assets/img/slide/slide-1.jpg);"> -->
+                          <img src="assets/img/slide/slide-1.jpg" height="500" width="462">
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="myModal2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                 <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <HotelDatePicker />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <router-view/>
+    </div>
+</template>
+<script>
+import axios from 'axios'
+import HotelDatePicker from 'vue-hotel-datepicker'
+import 'vue-hotel-datepicker/dist/vueHotelDatepicker.css'
+// import Datepicker from 'vuejs-datepicker'
+export default {
+  name: 'App',
+  components: {
+    HotelDatePicker
+  },
+  // components: {
+  //   Datepicker
+  // },
+  data: function () {
+    return {
+      customDate: new Date()
+    }
+  },
+  mounted () {
+    axios
+      .get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => (this.info = response))
+  }
+}
+</script>
+<style>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0px;
+  }
+  #nav {
+    padding: 30px;
+  }
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+  #r1 {
+    width: 1450px;
+  }
+  #c1 {
+    background-color: white;
+    border-style: groove;
+    padding: 20px;
+  }
+  #a1 {
+    color: darkcyan;
+    text-decoration: none;
+  }
+  #s1 {
+    padding: 0px 20px 0px 0px;
+  }
+  #c2 {
+    background-color: rgb(255, 255, 255);
+    height: 154px;
+  }
+  #c3 {
+    background-repeat: no-repeat;
+    height: 154px; width: 196px;
+  }
+  #col1 {
+    border-style: outset;
+  }
+  #p1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #p2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #d1 {
+    background-color: white;
+    padding: 10px;
+  }
+  #r3 {
+    padding: 0px 0px 0px 0px;
+    border-radius: 5px;
+  }
+  #i1 {
+    background-color: rgb(83, 17, 17);
+  }
+</style>
