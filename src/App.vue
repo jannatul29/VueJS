@@ -297,11 +297,14 @@ export default {
       //console.log(val.toLocaleString().slice(0, 10).replaceAll("/", "-"));
       var d = val.toLocaleString().split(",");
       console.log(d[0].replaceAll("/", "-"));
-      this.dates.in = val.toISOString().slice(0, 10);
+      console.log(val.toString().slice(4,14));
+      this.dates.in = val.toString().slice(4,14);
+      //this.dates.in = val.toISOString().slice(0, 10);
     },
     checkOut(val) {
       console.log(val.toISOString().slice(0, 10));
-      this.dates.out = val.toISOString().slice(0, 10);
+      this.dates.out = val.toString().slice(4,14);
+      //this.dates.out = val.toISOString().slice(0, 10);
     }
     
   }
