@@ -14,201 +14,430 @@
                 </div>
             </div>
       </nav>
-      <section id="featured-services" class="featured-services">
-            <div class="container">
-                <div class="row no-gutters" id="r1">
-                    <div class="col-lg-11 col-md-6">
-                      <div style="background-color: gainsboro;">
-                        <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row no-gutters" style="width: 1450px; text-align: left; height: 90px;">
-                    <div class="col-lg-11 col-md-6" >
-                      <div style="padding: 30px 0px 10px 0px">
-                        <span style="font-size: 30px; font-weight: normal;">Ready for your next trip? Book with us now. </span>
-                      </div>
-                    </div>
-                </div>
-                <div class="row no-gutters" id="r1">
-                    <div class="col-lg-7 col-md-6">
-                        <div class="row no-gutters">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="card" id="c1">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-6 col-md-6 p-0">
-                                            <div>
-                                                Flights
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <hr>
-                                     <div class="row no-gutters">
-                                        <div class="col-lg-6 col-md-6 p-0">
-                                            <div>
-                                                <a  href="#" id="a1">Rendom flights</a><span id="s1"></span><a  href="#" id="a1">Multi-city/stopover</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row no-gutters" >
-                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="card" id="c2" data-bs-toggle="modal" data-bs-target="#myModal">
-                                                <!-- <button type="button" class="btn btn-info">Info</button> -->
-                                                <p>Leaving from</p>
-                                                <p id="p1">{{ ita }}</p>
-                                                <span id="p2">{{ cty }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal1">
-                                                <!-- <button type="button" class="btn btn-info">Info</button> -->
-                                                 <p>Going to</p>
-                                                 <p id="p1">{{ ita1 }}</p>
-                                                <span id="p2">{{ cty1 }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal2">
-                                             <!-- <button type="button" class="btn btn-info">Info</button> -->
-                                                <span>Departing on</span>
-                                                <span id="p2">{{ dates.in }}</span>
-                                                <hr>
-                                                <!-- <HotelDatePicker /> -->
-                                                <span>Returning on</span>
-                                                <span id="p2">{{ dates.out }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="btn btn-info" type="button" id="c3" @click="getWeather()">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-6 col-md-6 p-0">
-                                            <div>
-                                                <a  href="#" id="a1">Return<i class="bi bi-chevron-down"></i></a><span id="s1"></span><a  href="#" id="a1">Economy, 1 Audlt<i class="bi bi-chevron-down"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row no-gutters" style="padding: 20px 0px 0px 0px;">
-                            <div class="col-lg-12 col-md-6">
-                                <div id="d1">
-                                    <div class="row no-gutters" id="r3">
-                                        <div class="col-lg-3 col-md-6 p-0">
-                                          <div class="icon-box" id="i1">
+      <section id="featured-services" class="featured-services section-bg">
 
-                                          </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0">
-                                          <div class="icon-box" id="i1">
-                                            <br><br>
-                                          </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0">
-                                          <div class="icon-box" id="i1">
-                                            <br><br>
-                                          </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 p-0">
-                                          <div class="icon-box" id="i1">
-                                            <br><br>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <!-- <div class="icon-box" style="background-image: url(assets/img/slide/slide-1.jpg);"> -->
-                          <img src="assets/img/slide/slide-1.jpg" height="500" width="462">
-                        <!-- </div> -->
-                    </div>
-                </div>
 
-              <div class="row no-gutters">
-  <div class="col-lg-6 col-md-6">
-    <div class="row no-gutters">
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-  <div class="col-lg-6 col-md-6">
-    <div class="row no-gutters">
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <ul class="pagination pagination-sm">
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
-
+      
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6" style="background-color: gainsboro;">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+          </div>
+        </div>
+        <!-- 1st row end-->
+        <br>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6">
+            <div class="icon-box">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span style="font-size: 30px; font-weight: normal;">Ready for your next trip? Book with us now. </span>
             </div>
-        </section>
+          </div>
+        </div>
+        <!-- 1st row end-->
+        <br>
+<div class="row no-gutters">
+    <div class="col-lg-8 col-md-6">
 
+      <div class="row no-gutters">
+        <div class="col-lg-12 col-md-6">
+            <div>
+                <p>Flights</p>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-3 col-md-6">
+          <div>
+            <a  href="#" id="a1">Rendom flights</a>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div>
+          <a  href="#" id="a1">Multi-city/stopover</a>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-6">
+      <div>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div>
+    </div>
+</div>
+  </div>
 
-          <div class="modal" id="myModal">
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-6">
+              <div class="icon-box" style=" border-radius: 5px;border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal">
+                <p>Leaving from</p>
+                <p id="p1">{{ ita }}</p>
+                <span id="p2">{{ cty }}</span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal1">
+              <p>Going to</p>
+              <p id="p1">{{ ita1 }}</p>
+              <span id="p2">{{ cty1 }}</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal2">
+            <p>Departing on</p>
+            <span id="p2">{{ dates.in }}</span>
+            <hr>
+            <!-- <HotelDatePicker /> -->
+            <p>Returning on</p>
+            <span id="p2">{{ dates.out }}</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class=" btn btn-info" type="button" id="c3" style="background-color:rgb(9, 67, 124); border-radius: 5px; height: 200px;" @click="getWeather()">
+          <br><br><br>
+          <img src="image/5.svg" height="50" width="100">
+          <br><br><br>
+      </div>
+    </div>
+        </div>
+        <br>
+        <div class="row no-gutters">
+          <div class="col-lg-2 col-md-6">
+              <div>
+                <a  href="#" id="a1">Return <i class="fal fa-chevron-down"></i></a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div>
+              <a  href="#" id="a1">Economy, 1 Audlt <i class="fal fa-chevron-down"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div>
+        </div>
+    </div>
+      </div>
+      <br>
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-6">
+                    <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
+                      <div class="card-body">
+                        <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
+                        <br>
+                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+                      </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
+                        <br>
+                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+                </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
+          <div class="card-body">
+            <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
+                        <br>
+                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+          </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-6">
+  <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
+    <div class="card-body">
+      <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
+                        <br>
+                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="row no-gutters">
+            <div class="col-lg-12 col-md-6">
+                <div class="icon-box">
+                    <h6 class="descrip" style="padding: 0px 0px 0px 0px;">CATAGORIES</h6>
+                    <p class="descrip">
+                      <a href="">Alabama</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Arizona</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Beaches</a><br>
+                      <a href="">California</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Florida</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Georgia</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Hawaii</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Hiking</a><br>
+                      <a href="">Maine</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Maryland</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Massachusetts</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Museums</a><br>
+                      <a href="">Oregon</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Parks</a><br>
+                      <a href="">Place To Stay</a><br>
+                      <a href="">Restaurants</a><br>
+                      <a href="">South Carolina</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Tennessee</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Texas</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
+                      <a href="">Things to do</a><br><a href="">Tours</a><br><a href="">Uncategorized</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row no-gutters">
+  <div class="col-lg-12 col-md-6">
+    <div class="icon-box">
+      <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      <p class="fw-bold">Select Departing Flight</p> 
+      <p>{{ cty }} to {{ cty1 }} {{ dates.out }}</p>
+    </div>
+  </div>
+</div>
+<div class="row no-gutters">
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+      <div class="col-lg-12 col-md-6">
+        <!-- <div class="icon-box"> -->
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>{{ dates.out }}, Forecast for {{ cty1 }}</p>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="row no-gutters">
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+          <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
+          <h3 class="card-text" style="color:black;">70</h3>
+          <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+          <p style="color:black ;font-size:14px;">Some quick </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
+        <h3 class="card-text" style="color:black;">70</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
+        <h3 class="card-text" style="color:black;">70</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
+        <h3 class="card-text" style="color:black;">70</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+  </div>
+</div>
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+      <div class="col-lg-12 col-md-6">
+        <!-- <div class="icon-box"> -->
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>{{ dates.out }}, Forecast for {{ cty1 }}</p>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="row no-gutters">
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
+        <h3 class="card-text" style="color:black;">{{ avg1 }}</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
+        <h3 class="card-text" style="color:black;">{{ avg2 }}</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
+        <h3 class="card-text" style="color:black;">{{ avg3 }}</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="text-align: center">
+        <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
+        <h3 class="card-text" style="color:black;">{{ avg4 }}</h3>
+        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <p style="color:black ;font-size:14px;">Some quick </p>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<div class="row no-gutters">
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Sort by:</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Recommended</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Departure time</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Arrival time </p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Duration</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Fare</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Sort by:</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Recommended</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>View the lates</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>View the lates</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>View the lates</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p>View the lates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <p style="color:black ;font-size:12px;">Lowest Price</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 col-md-6">
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6" style="background-color:rgb(9, 67, 124)">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6">
+            <div class="icon-box">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6">
+            <div class="icon-box">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6" style="background-color:rgb(16, 37, 58)">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6">
+            <div class="icon-box">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6">
+            <div class="icon-box">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<div class="modal" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -299,6 +528,7 @@
 import axios from 'axios'
 import HotelDatePicker from 'vue-hotel-datepicker'
 import 'vue-hotel-datepicker/dist/vueHotelDatepicker.css'
+import usersData from "../data.json";
 // import Datepicker from 'vuejs-datepicker'
 export default {
   name: 'App',
@@ -315,14 +545,18 @@ export default {
       ita: "DAC",
       users: [],
       uname1: "",
-      cty1: "Dhaka",
+      cty1: "Coxs Bazar",
       ita1: "DAC",
       users1: [],
       gdate: "",
       dates: {
-        in: null,
-        out: null
-      }
+        in: "Jan 10 2022",
+        out: "Jan 15 2022"
+      },
+      avg1: "19",
+      avg2: "22",
+      avg3: "30",
+      avg4: "24"
 
     }
   },
@@ -417,11 +651,11 @@ export default {
               sum4= sum4+res.data.forecast.forecastday[0].hour[i].temp_c;
             }
           }
-          var avg1= (sum1/6).toFixed(2);
-          var avg2= (sum2/6).toFixed(2);
-          var avg3= (sum3/6).toFixed(2);
-          var avg4= (sum4/6).toFixed(2);
-          console.log(avg1);
+          this.avg1= Math.round(sum1/6);
+          this.avg2= Math.round(sum2/6);
+          this.avg3= Math.round(sum3/6);
+          this.avg4= Math.round(sum4/6);
+          console.log(this.avg1);
       
         })
         .catch(err => {
@@ -437,12 +671,11 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 0px;
   }
   #nav {
-    padding: 30px;
+    padding: 20px;
   }
   #nav a {
     font-weight: bold;
@@ -451,49 +684,80 @@ export default {
   #nav a.router-link-exact-active {
     color: #42b983;
   }
-  #r1 {
-    width: 1450px;
-  }
-  #c1 {
-    background-color: white;
-    border-style: groove;
-    padding: 20px;
-  }
-  #a1 {
-    color: darkcyan;
-    text-decoration: none;
-  }
-  #s1 {
-    padding: 0px 20px 0px 0px;
-  }
-  #c2 {
-    background-color: rgb(255, 255, 255);
-    height: 154px;
-  }
-  #c3 {
-    background-repeat: no-repeat;
-    height: 154px; width: 196px;
-  }
-  #col1 {
-    border-style: outset;
-  }
-  #p1 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  #p2 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  #d1 {
-    background-color: white;
-    padding: 10px;
-  }
-  #r3 {
-    padding: 0px 0px 0px 0px;
-    border-radius: 5px;
-  }
-  #i1 {
-    background-color: rgb(83, 17, 17);
-  }
+  
+  a {
+  text-decoration: none;
+  color: #5cb874;
+}
+
+a:hover {
+  color: #80c792;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+.featured-services {
+  padding: 20px 0;
+}
+.featured-services .icon-box {
+  padding: 20px;
+}
+.featured-services .icon-box-bg {
+  background-image: linear-gradient(0deg, #222222 0%, #2f2f2f 50%, #222222 100%);
+}
+.featured-services .icon {
+  margin-bottom: 15px;
+}
+.featured-services .icon i {
+  color: #5cb874;
+  font-size: 42px;
+}
+.featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.featured-services .title a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+.featured-services .icon-box:hover .title a {
+  color: #5cb874;
+}
+.featured-services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+.featured-services .description a {
+  color: #ffffff;
+}
+.featured-services .icon-box:hover .description a {
+  color: #5cb874;
+}
+.featured-services .descrip {
+  line-height: 24px;
+  font-size: 14px;
+}
+.featured-services .descrip a {
+  color: #5cb874;
+}
+.featured-services .icon-box:hover .descrip a {
+  color: #5cb874;
+}
+#p1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#p2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#c3 {
+  background-repeat: no-repeat;
+  height: 154px; width: 196px;
+}
 </style>
