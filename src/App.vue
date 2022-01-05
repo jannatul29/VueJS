@@ -94,12 +94,15 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class=" btn btn-info" type="button" id="c3" style="background-color:rgb(9, 67, 124); border-radius: 5px; height: 200px;" @click="getWeather()">
-          <br><br><br>
-          <img src="image/5.svg" height="50" width="100">
-          <br><br><br>
+          <div class="icon-box btn btn-info" type="button" style="background-color:rgb(9, 67, 124); border-radius: 5px; border-style: outset; height: 200px;" @click="getWeather()">
+            <br><i class="fa fa-plane" style=" color: white; text-align: center"></i>
+            <br><br><br>
+            <h5 style=" color: white; text-align: center">Search flights</h5>
+            <br><br>
+        </div>
       </div>
-    </div>
+
+      
         </div>
         <br>
         <div class="row no-gutters">
@@ -127,36 +130,32 @@
             <div class="col-lg-3 col-md-6">
                     <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
                       <div class="card-body">
-                        <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
-                        <br>
-                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+                        <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-bars"></i></h3>
+                        <p style=" color: white; text-align: center">Manage booking</p>
                       </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
                 <div class="card-body">
-                  <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
-                        <br>
-                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+                  <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-bars"></i></h3>
+                        <p style=" color: white; text-align: center">Check in</p>
                 </div>
           </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
           <div class="card-body">
-            <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
-                        <br>
-                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+            <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-exchange-alt"></i></h3>
+                        <p style=" color: white; text-align: center">Rebook and refund</p>
           </div>
     </div>
 </div>
 <div class="col-lg-3 col-md-6">
   <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
     <div class="card-body">
-      <h3 class="card-title" style="color:rgb(11, 146, 101)">"Tybee is replace with"</h3>
-                        <br>
-                        <a href="#" style="text-decoration: underline; color:rgb(11, 146, 101)">Find Perfectti</a><br>
+      <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-shield-virus"></i></h3>
+                        <p style=" color: white; text-align: center">COVID-19 updates</p>
     </div>
 </div>
 </div>
@@ -218,32 +217,32 @@
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
           <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
-          <h3 class="card-text" style="color:black;">70</h3>
-          <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+          <h3 class="card-text" style="color:black;">70&deg;</h3>
+          <span><i class='fas fa-cloud-sun' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
           <p style="color:black ;font-size:14px;">Some quick </p>
       </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
-        <h3 class="card-text" style="color:black;">70</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <span><i class='fas fa-cloud-hail-mixed' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
-        <h3 class="card-text" style="color:black;">70</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <span><i class='fas fa-cloud-moon-rain' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
-        <h3 class="card-text" style="color:black;">70</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <span><i class='fas fa-cloud-moon' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
@@ -262,32 +261,32 @@
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
-        <h3 class="card-text" style="color:black;">{{ avg1 }}</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">{{ avg1 }}&deg;</h3>
+        <span><i class='fas fa-cloud-sun' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
-        <h3 class="card-text" style="color:black;">{{ avg2 }}</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">{{ avg2 }}&deg;</h3>
+        <span><i class='fas fa-cloud-hail-mixed' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
-        <h3 class="card-text" style="color:black;">{{ avg3 }}</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">{{ avg3 }}&deg;</h3>
+        <span><i class='fas fa-cloud-moon-rain' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
-        <h3 class="card-text" style="color:black;">{{ avg4 }}</h3>
-        <span><i class='fas fa-smog' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
+        <h3 class="card-text" style="color:black;">{{ avg4 }}&deg;</h3>
+        <span><i class='fas fa-cloud-moon' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
         <p style="color:black ;font-size:14px;">Some quick </p>
     </div>
     </div>
@@ -387,7 +386,7 @@
         <div class="row no-gutters">
           <div class="col-lg-12 col-md-6" style="background-color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span>
+              <span class="fw-bold" style="color: white">Economy</span>
           </div>
         </div>
         <div class="row no-gutters">
@@ -411,7 +410,7 @@
         <div class="row no-gutters">
           <div class="col-lg-12 col-md-6" style="background-color:rgb(16, 37, 58)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span>
+              <span class="fw-bold" style="color: white">Premium Economy</span>
           </div>
         </div>
         <div class="row no-gutters">
@@ -758,8 +757,5 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   font-weight: bold;
 }
-#c3 {
-  background-repeat: no-repeat;
-  height: 154px; width: 196px;
-}
+
 </style>
