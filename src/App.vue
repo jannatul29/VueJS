@@ -394,7 +394,7 @@
           <div class="col-lg-12 col-md-6">
             <div class="icon-box">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 {{ jsondata.place }}
             </div>
           </div>
         </div>
@@ -528,7 +528,7 @@
 import axios from 'axios'
 import HotelDatePicker from 'vue-hotel-datepicker'
 import 'vue-hotel-datepicker/dist/vueHotelDatepicker.css'
-import usersData from "../data.json";
+import jData from "../data.json";
 // import Datepicker from 'vuejs-datepicker'
 export default {
   name: 'App',
@@ -556,7 +556,8 @@ export default {
       avg1: "19",
       avg2: "22",
       avg3: "30",
-      avg4: "24"
+      avg4: "24",
+      jsondata: jData
 
     }
   },
@@ -609,7 +610,7 @@ export default {
       var d = val.toLocaleString().split(",");
       console.log(d[0].replaceAll("/", "-"));
       //console.log(val.toString().slice(4,14));
-      this.dates.in = val.toString().slice(4,14);
+      this.dates.in = val.toString().slice(4,16);
       this.gdate = val.toISOString().slice(0, 10);
       //console.log(moment(val).format('MM/DD/YYYY'));
     },
@@ -656,6 +657,7 @@ export default {
           this.avg3= Math.round(sum3/6);
           this.avg4= Math.round(sum4/6);
           console.log(this.avg1);
+          console.log(jsonData.place);
       
         })
         .catch(err => {
