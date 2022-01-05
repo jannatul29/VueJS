@@ -13,19 +13,10 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Leaving from"
-        v-model="uname"
-        @input="getUser"
-      />
     </div>
     <div>
      <ul class="">
-          <p @click="setState(user)" v-for="user in users" :key="user.n">
-            {{ user.name }}
-          </p>
+          
         </ul>  
     </div>
 
@@ -48,18 +39,10 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Going to"
-        v-model="uname"
-        @input="getUser"
-      />
     </div>
     <div>
      <ul class="">
-          <p @click="setState(user)" v-for="user in users" :key="user.n">
-            {{ user.name }}
+          
           </p>
         </ul>  
     </div>

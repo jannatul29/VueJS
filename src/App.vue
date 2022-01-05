@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="row no-gutters" >
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="card btn btn-info" type="button" id="c2" data-bs-toggle="modal" data-bs-target="#myModal">
+                                            <div class="card" id="c2" data-bs-toggle="modal" data-bs-target="#myModal">
                                                 <!-- <button type="button" class="btn btn-info">Info</button> -->
                                                 <p>Leaving from</p>
                                                 <p id="p1">{{ ita }}</p>
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6 p-0" id="col1">
-                                            <div class="btn btn-info" type="button" id="c3">
+                                            <div class="btn btn-info" type="button" id="c3" @click="getWeather()">
                                             </div>
                                         </div>
                                     </div>
@@ -128,6 +128,82 @@
                         <!-- </div> -->
                     </div>
                 </div>
+
+              <div class="row no-gutters">
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div class="col-lg-6 col-md-6">
+    <div class="row no-gutters">
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <ul class="pagination pagination-sm">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
             </div>
         </section>
 
@@ -242,6 +318,7 @@ export default {
       cty1: "Dhaka",
       ita1: "DAC",
       users1: [],
+      gdate: "",
       dates: {
         in: null,
         out: null
@@ -297,14 +374,59 @@ export default {
       //console.log(val.toLocaleString().slice(0, 10).replaceAll("/", "-"));
       var d = val.toLocaleString().split(",");
       console.log(d[0].replaceAll("/", "-"));
-      console.log(val.toString().slice(4,14));
+      //console.log(val.toString().slice(4,14));
       this.dates.in = val.toString().slice(4,14);
-      //this.dates.in = val.toISOString().slice(0, 10);
+      this.gdate = val.toISOString().slice(0, 10);
+      //console.log(moment(val).format('MM/DD/YYYY'));
     },
     checkOut(val) {
       console.log(val.toISOString().slice(0, 10));
-      this.dates.out = val.toString().slice(4,14);
+      this.dates.out = val.toString().slice(4,16);
       //this.dates.out = val.toISOString().slice(0, 10);
+    },
+
+    getWeather(){
+      axios
+        .get(
+           "http://api.weatherapi.com/v1/forecast.json?key=eb7d27b37d204bbbb2241423213112&q=" +
+          this.cty1 +
+          "&dt=" +
+          this.dates.out   
+        )
+        .then(res => {
+          //console.log(res.data.forecast.forecastday[0].hour[0].temp_c);
+          // console.log(res.data.forecast);
+          // var ho = res.data.forecast.forecastday[0].hour;
+          // console.log(ho);
+          //this.weather = res.data.forecast.forecastday[0];
+          var sum1=0;
+          var sum2=0;
+          var sum3=0;
+          var sum4=0;
+          for(var i =0; i<24; i++) {
+            if(i>=0 && i<6){
+              sum1= sum1+res.data.forecast.forecastday[0].hour[i].temp_c;
+            }   
+            else if(i>=6 && i<12){
+              sum2= sum2+res.data.forecast.forecastday[0].hour[i].temp_c;
+            }
+            else if(i>=12 && i<18){
+              sum3= sum3+res.data.forecast.forecastday[0].hour[i].temp_c;
+            }
+            else if(i>=18 && i<24){
+              sum4= sum4+res.data.forecast.forecastday[0].hour[i].temp_c;
+            }
+          }
+          var avg1= (sum1/6).toFixed(2);
+          var avg2= (sum2/6).toFixed(2);
+          var avg3= (sum3/6).toFixed(2);
+          var avg4= (sum4/6).toFixed(2);
+          console.log(avg1);
+      
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
     
   }
