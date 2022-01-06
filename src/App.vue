@@ -530,23 +530,25 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Leaving from"
-        v-model="uname"
-        @input="getUser"
-      />
-    </div>
-    <div>
-     <ul class="">
-          <p @click="setState(user)" v-for="user in users" :key="user.n">
-            {{ user.name }}
-          </p>
-        </ul>  
-    </div>
-
-  </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Leaving from"
+            v-model="uname"
+            @input="getUser"
+          />
+        </div>
+        <div>
+          <ul class="">
+            <p @click="setState(user)" v-for="user in users" :key="user.n">
+              {{ user.name }}
+            </p>
+          </ul>  
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Apply</button>
+      </div>
       </div>
 
     </div>
@@ -565,22 +567,25 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Leaving from"
-        v-model="uname1"
-        @input="getUser1"
-      />
-    </div>
-    <div>
-     <ul class="">
-          <p @click="setState1(user1)" v-for="user1 in users1" :key="user1.n">
-            {{ user1.name }}
-          </p>
-        </ul>  
-    </div>
-  </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Leaving from"
+            v-model="uname1"
+            @input="getUser1"
+          />
+        </div>
+        <div>
+          <ul class="">
+            <p @click="setState1(user1)" v-for="user1 in users1" :key="user1.n">
+              {{ user1.name }}
+            </p>
+          </ul>  
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Apply</button>
+      </div>
       </div>
 
     </div>
@@ -596,6 +601,9 @@
               </div>
               <div class="modal-body">
                 <HotelDatePicker @check-in-changed="checkIn" @check-out-changed="checkOut"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Apply</button>
               </div>
             </div>
           </div>
