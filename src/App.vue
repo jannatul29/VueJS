@@ -733,15 +733,15 @@ export default {
             }   
             else if(i>=6 && i<12){
               sum2= sum2+res.data.forecast.forecastday[0].hour[i].temp_c;
-              r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+              r2= r2+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
             else if(i>=12 && i<18){
               sum3= sum3+res.data.forecast.forecastday[0].hour[i].temp_c;
-             r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+             r3= r3+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
             else if(i>=18 && i<24){
               sum4= sum4+res.data.forecast.forecastday[0].hour[i].temp_c;
-              r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+              r4= r4+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
           }
           this.avg1= Math.round(sum1/6);
@@ -756,6 +756,7 @@ export default {
           console.log(this.avg1);
           //console.log(jsonData.place);
           console.log(res.data.forecast.forecastday[0].hour[0].chance_of_rain);
+          console.log(r1);
       
         })
         .catch(err => {
