@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-## Build Setup
+## After cloning this assignment, please follow the steps
 
 ``` bash
 # install dependencies
@@ -11,11 +11,6 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -27,10 +22,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 4. VueJS
 
 ### Used Api: https://rapidapi.com/weatherapi/api/weatherapi-com/ , https://api.sharetrip.net/api/v1/flight/search/airport?name=Vancouver
-
-### After cloning this assignment, please follow the steps:
-1. npm run start (execute for server run)
-2. Searching URL(e.g.): http://localhost:8080/#/
 
 ## Assignment Details
 ### When someone click on "Leaving from" ,he/she can select the location.
