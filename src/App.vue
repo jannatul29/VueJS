@@ -1,16 +1,16 @@
 <template>
     <div id="app">
-      <nav class="container navbar navbar-expand-lg navbar-light bg-light" id="nav">
-          <a class="navbar-brand" href="#">Logo Here</a>
+      <nav class="container navbar navbar-expand-lg navbar-light bg-light" id="nav" style="background-color: teal">
+          <a class="navbar-brand" href="#" style="text-shadow: 2px 2px;color: red; font-size: 25px;">FlightForYou.Com</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <div class="navbar-nav ms-auto">
-                    <router-link to="/" class="nav-item nav-link">Offers</router-link>
-                    <router-link to="/About" class="nav-item nav-link">Manage</router-link>
-                    <router-link to="#" class="nav-link">Experience</router-link>
-                    <router-link to="/About" class="nav-link">Marco Polo Club</router-link>
+                    <li to="#" class="nav-item nav-link">Offers</li>
+                    <li href="#" class="nav-item nav-link">Manage</li>
+                    <li href="#" class="nav-link">Experience</li>
+                    <li href="#" class="nav-link">Marco Polo Club</li>
                 </div>
             </div>
       </nav>
@@ -50,12 +50,12 @@
     <div class="row no-gutters">
       <div class="col-lg-3 col-md-6">
           <div>
-            <a  href="#" id="a1">Rendom flights</a>
+            <a  href="#" id="a1" style="color: rgb(9, 67, 124)">Rendom flights</a>
           </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div>
-          <a  href="#" id="a1">Multi-city/stopover</a>
+          <a  href="#" id="a1" style="color: rgb(9, 67, 124)">Multi-city/stopover</a>
         </div>
     </div>
     <div class="col-lg-2 col-md-6">
@@ -94,11 +94,11 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
-          <div class="icon-box btn btn-info" type="button" style="background-color:rgb(9, 67, 124); border-radius: 5px; border-style: outset; height: 200px;" @click="getWeather()">
-            <br><i class="fa fa-plane" style=" color: white; text-align: center"></i>
-            <br><br><br>
-            <h5 style=" color: white; text-align: center">Search flights</h5>
-            <br><br>
+          <div class="icon-box btn btn-info" type="button" style="background-color:rgb(9, 67, 124); border-radius: 5px; border-style: outset; height: 200px;" @click="getWeather()" href="#top">
+            <a href="#top"><br><i class="fa fa-plane" style=" color: white; text-align: center"></i>
+            <br><br><br></a>
+            <a href="#top" style=" color: white; text-align: center"><h5>Search flights</h5>
+            <br><br></a>
         </div>
       </div>
 
@@ -108,12 +108,12 @@
         <div class="row no-gutters">
           <div class="col-lg-2 col-md-6">
               <div>
-                <a  href="#" id="a1">Return <i class="fal fa-chevron-down"></i></a>
+                <a  href="#" id="a1" style="color: rgb(9, 67, 124)">Return <i class="fal fa-chevron-down"></i></a>
               </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div>
-              <a  href="#" id="a1">Economy, 1 Audlt <i class="fal fa-chevron-down"></i></a>
+              <a  href="#" id="a1" style="color: rgb(9, 67, 124)">Economy, 1 Audlt <i class="fal fa-chevron-down"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -161,45 +161,23 @@
 </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6" style= "background: url(./assets/logo.png); background-repeat: no-repeat;background-size: cover;">
         <div class="row no-gutters">
             <div class="col-lg-12 col-md-6">
                 <div class="icon-box">
-                    <h6 class="descrip" style="padding: 0px 0px 0px 0px;">CATAGORIES</h6>
-                    <p class="descrip">
-                      <a href="">Alabama</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Arizona</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Beaches</a><br>
-                      <a href="">California</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Florida</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Georgia</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Hawaii</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Hiking</a><br>
-                      <a href="">Maine</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Maryland</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Massachusetts</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Museums</a><br>
-                      <a href="">Oregon</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Parks</a><br>
-                      <a href="">Place To Stay</a><br>
-                      <a href="">Restaurants</a><br>
-                      <a href="">South Carolina</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Tennessee</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Texas</a><a href=""><i class="fal fa-chevron-circle-down" style="float: right;"></i></a><br>
-                      <a href="">Things to do</a><br><a href="">Tours</a><br><a href="">Uncategorized</a>
-                    </p>
+                  <br>
+                  <img src="./assets/images.jpg" style="object-fit: inherit;" height="450" width= "400">
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-<div class="row no-gutters">
+<div class="row no-gutters" id="top">
   <div class="col-lg-12 col-md-6">
     <div class="icon-box">
       <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-      <p class="fw-bold">Select Departing Flight</p> 
-      <p>{{ cty }} to {{ cty1 }} {{ dates.out }}</p>
+      <p class="fw-bold" style="color: rgb(9, 67, 124)">Select Departing Flight</p> 
+      <p><span class="fw-bold">{{ cty }}</span> to <span class="fw-bold">{{ cty1 }}</span> {{ dates.out }}</p>
     </div>
   </div>
 </div>
@@ -209,7 +187,7 @@
       <div class="col-lg-12 col-md-6">
         <!-- <div class="icon-box"> -->
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>{{ dates.out }}, Forecast for {{ cty1 }}</p>
+          <p>{{ dates.out }}, <span class="fw-bold">Forecast for {{ cty1 }}</span></p>
         <!-- </div> -->
       </div>
     </div>
@@ -253,7 +231,7 @@
       <div class="col-lg-12 col-md-6">
         <!-- <div class="icon-box"> -->
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>{{ dates.out }}, Forecast for {{ cty1 }}</p>
+          <p>{{ dates.out }}, <span class="fw-bold">Forecast for {{ cty1 }}</span></p>
         <!-- </div> -->
       </div>
     </div>
@@ -263,7 +241,7 @@
         <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
         <h3 class="card-text" style="color:black;">{{ avg1 }}&deg;</h3>
         <span><i class='fas fa-cloud-sun' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar1 }}% </p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
@@ -271,7 +249,7 @@
         <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
         <h3 class="card-text" style="color:black;">{{ avg2 }}&deg;</h3>
         <span><i class='fas fa-cloud-hail-mixed' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar2 }}%</p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
@@ -279,7 +257,7 @@
         <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
         <h3 class="card-text" style="color:black;">{{ avg3 }}&deg;</h3>
         <span><i class='fas fa-cloud-moon-rain' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar3 }}%</p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
@@ -287,7 +265,7 @@
         <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
         <h3 class="card-text" style="color:black;">{{ avg4 }}&deg;</h3>
         <span><i class='fas fa-cloud-moon' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar4 }}%</p>
     </div>
     </div>
   </div>
@@ -297,64 +275,139 @@
 <div class="row no-gutters">
   <div class="col-lg-6 col-md-6">
     <div class="row no-gutters">
-      <div class="col-lg-2 col-md-6">
+      <div class="col-lg-3 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Sort by:</p>
+          <p style="color:black ;font-size:12px;">Sort by: <span style="color: rgb(9, 67, 124)">Recommended</span></p>
       </div>
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Recommended</p>
+          <p style="color: rgb(9, 67, 124) ;font-size:12px;">Departure time</p>
       </div>
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Departure time</p>
+          <p style="color: rgb(9, 67, 124) ;font-size:12px;">Arrival time </p>
       </div>
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Arrival time </p>
+          <p style="color: rgb(9, 67, 124) ;font-size:12px;">Duration</p>
       </div>
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Duration</p>
+          <p style="color: rgb(9, 67, 124) ;font-size:12px;">Fare</p>
       </div>
-      <div class="col-lg-2 col-md-6">
-          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Fare</p>
+      <div class="col-lg-1 col-md-6">
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> --> 
       </div>
     </div>
     <div class="row no-gutters">
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Sort by:</p>
+          <p style="color:black ;font-size:12px;">5 flights found</p>
       </div>
       <div class="col-lg-2 col-md-6">
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p style="color:black ;font-size:12px;">Recommended</p>
+          <p style="color: rgb(9, 67, 124) ;font-size:12px;">Filter <i class="fal fa-chevron-down"></i></p>
       </div>
     </div>
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="text-align:center">
       <div class="col-lg-3 col-md-6">
         <div class="icon-box">
+          <br>
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>View the lates</p>
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.st.start }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty }}</span>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="icon-box">
+          <br>
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>View the lates</p>
+          <span style="color: black ;font-size:12px;">{{ jsondata.st.duration }}</span><br>
+          <span class="fw-bold" style="font-size:12px; color: rgb(9, 67, 124) ;">LAX</span>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="icon-box">
+          <br>
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>View the lates</p>
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.st.end }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty1 }}</span>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="icon-box">
+          <br>
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>View the lates</p>
+          <span style="color: black ;font-size:13px;">CX880 <i class="fal fa-chevron-right"></i> CX7906</span><br>
+          <span style="font-size:12px; color: rgb(9, 67, 124)">View details <i class="fal fa-chevron-down"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters" style="text-align:center">
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.nd.start }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty }}</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: black ;font-size:12px;">{{ jsondata.nd.duration }}</span><br>
+          <span class="fw-bold" style="font-size:12px; color: rgb(9, 67, 124) ;">LAX</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.nd.end }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty1 }}</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: black ;font-size:13px;">CX880 <i class="fal fa-chevron-right"></i> AA2002</span><br>
+          <span style="font-size:12px; color: rgb(9, 67, 124)">View details <i class="fal fa-chevron-down"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters" style="text-align:center">
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.rd.start }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty }}</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: black ;font-size:12px;">{{ jsondata.rd.duration }}</span><br>
+          <span class="fw-bold" style="font-size:12px; color: rgb(9, 67, 124) ;">LAX</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: rgb(9, 67, 124) ;font-size:20px;">{{ jsondata.rd.end }}</span><br>
+          <span class="fw-bold" style="font-size:12px;">{{ cty1 }}</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="icon-box">
+          <br>
+          <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+          <span style="color: black ;font-size:13px;">CX880 <i class="fal fa-chevron-right"></i> AA2475</span><br>
+          <span style="font-size:12px; color: rgb(9, 67, 124)">View details <i class="fal fa-chevron-down"></i></span>
         </div>
       </div>
     </div>
@@ -382,7 +435,7 @@
       </div>
     </div>
     <div class="row no-gutters">
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-6 col-md-6" style="text-align: center">
         <div class="row no-gutters">
           <div class="col-lg-12 col-md-6" style="background-color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
@@ -390,42 +443,70 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-12 col-md-6">
-            <div class="icon-box">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 {{ jsondata.place }}
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.economy.price1 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
             </div>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-12 col-md-6">
-            <div class="icon-box">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.economy.price2 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.economy.price3 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-6 col-md-6" style="text-align: center">
         <div class="row no-gutters">
-          <div class="col-lg-12 col-md-6" style="background-color:rgb(16, 37, 58)">
+          <div class="col-lg-12 col-md-6" style="background-color:steelblue">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
               <span class="fw-bold" style="color: white">Premium Economy</span>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-12 col-md-6">
-            <div class="icon-box">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.premium.price1 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
             </div>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-12 col-md-6">
-            <div class="icon-box">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
               <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-              <span class="fw-bold">2 latest updates </span> View the latest COVID-19 travel restrictions, quarentine requirenments and more
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.premium.price1 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-6" style="border-bottom-style: solid; border-bottom-color: rgb(9, 67, 124);">
+            <div class="icon-box" style="color:rgb(9, 67, 124)">
+              <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
+              <span style="font-size:12px;">From</span><br>
+              <span>{{ jsondata.premium.price1 }}</span><br>
+              <span style="font-size:12px;">View fare <i class="fal fa-chevron-down"></i></span>
             </div>
           </div>
         </div>
@@ -540,22 +621,26 @@ export default {
   data: function() {
     return {
       uname: "",
-      cty: "Dhaka",
-      ita: "DAC",
+      cty: "place",
+      ita: "Select",
       users: [],
       uname1: "",
-      cty1: "Coxs Bazar",
-      ita1: "DAC",
+      cty1: "place",
+      ita1: "Select",
       users1: [],
       gdate: "",
       dates: {
-        in: "Jan 10 2022",
-        out: "Jan 15 2022"
+        in: "Select date",
+        out: "Select date"
       },
       avg1: "19",
       avg2: "22",
       avg3: "30",
       avg4: "24",
+      ar1: "0",
+      ar2: "0",
+      ar3: "0",
+      ar4: "0",
       jsondata: jData
 
     }
@@ -637,26 +722,40 @@ export default {
           var sum2=0;
           var sum3=0;
           var sum4=0;
+          var r1 = 0;
+          var r2 = 0;
+          var r3 = 0;
+          var r4 = 0;
           for(var i =0; i<24; i++) {
             if(i>=0 && i<6){
               sum1= sum1+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }   
             else if(i>=6 && i<12){
               sum2= sum2+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
             else if(i>=12 && i<18){
               sum3= sum3+res.data.forecast.forecastday[0].hour[i].temp_c;
+             r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
             else if(i>=18 && i<24){
               sum4= sum4+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r1= r1+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
             }
           }
           this.avg1= Math.round(sum1/6);
           this.avg2= Math.round(sum2/6);
           this.avg3= Math.round(sum3/6);
           this.avg4= Math.round(sum4/6);
+
+          this.ar1= Math.round(r1/6);
+          this.ar2= Math.round(r2/6);
+          this.ar3= Math.round(r3/6);
+          this.ar4= Math.round(r4/6);
           console.log(this.avg1);
-          console.log(jsonData.place);
+          //console.log(jsonData.place);
+          console.log(res.data.forecast.forecastday[0].hour[0].chance_of_rain);
       
         })
         .catch(err => {

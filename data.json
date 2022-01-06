@@ -4,11 +4,36 @@
     "economy": {
     "from": "Dhaka",
     "fare": "800$",
-    "time": ""
+    "time": "",
+    "price1": "HKD12,524",
+    "price2": "HKD16,378",
+    "price3": "HKD16,378"
     },
     "premium": {
     "from": "",
     "fare": "",
-    "time": ""
+    "time": "",
+    "price1": "HKD19,804",
+    "price2": "HKD21,578",
+    "price3": "HKD21,578"
+    },
+    "st": {
+        "start": "00:15",
+        "end": "00:50",
+        "duration": "16h 35m"
+
+    },
+    "nd": {
+        "start": "00:15",
+        "end": "08:26",
+        "duration": "24h 11m"
+
+    },
+    "rd": {
+        "start": "00:15",
+        "end": "12:02",
+        "duration": "27h 47m"
+
     }
+
     }
