@@ -705,13 +705,23 @@ export default {
     },
 
     getWeather(){
-      axios
-        .get(
-           "http://api.weatherapi.com/v1/forecast.json?key=eb7d27b37d204bbbb2241423213112&q=" +
-          this.cty1 +
-          "&dt=" +
-          this.dates.out   
-        )
+      var options = {
+      method: 'GET',
+      url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
+      params: {q: this.cty1, days: '14', dt: this.dates.out},
+      headers: {
+        'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+        'x-rapidapi-key': 'c49cca5c2amsh371fad4eb82cb43p1e10e3jsnc0f8c3454347'
+      }
+    };
+      // axios
+      //   .get(
+      //      "http://api.weatherapi.com/v1/forecast.json?key=eb7d27b37d204bbbb2241423213112&q=" +
+      //     this.cty1 +
+      //     "&dt=" +
+      //     this.dates.out   
+      //   )
+      axios.request(options)
         .then(res => {
           //console.log(res.data.forecast.forecastday[0].hour[0].temp_c);
           // console.log(res.data.forecast);
