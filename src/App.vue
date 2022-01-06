@@ -195,33 +195,33 @@
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
           <span class="card-text" style="color:black; font-size: 14px;">Morning</span>
-          <h3 class="card-text" style="color:black;">70&deg;</h3>
+          <h3 class="card-text" style="color:black;">{{ avg1s }}&deg;</h3>
           <span><i class='fas fa-cloud-sun' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-          <p style="color:black ;font-size:14px;">Some quick </p>
+          <p style="color:black ;font-size:14px;">{{ ar1s }}% </p>
       </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Afternoon</span>
-        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <h3 class="card-text" style="color:black;">{{ avg2s }}&deg;</h3>
         <span><i class='fas fa-cloud-hail-mixed' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar2s }}%</p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Evening</span>
-        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <h3 class="card-text" style="color:black;">{{ avg3s }}&deg;</h3>
         <span><i class='fas fa-cloud-moon-rain' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar3s }}%</p>
     </div>
     </div>
     <div class="col-lg-3 col-md-6">
       <div class="card" style="text-align: center">
         <span class="card-text" style="color:black; font-size: 14px;">Overnight</span>
-        <h3 class="card-text" style="color:black;">70&deg;</h3>
+        <h3 class="card-text" style="color:black;">{{ avg4s }}&deg;</h3>
         <span><i class='fas fa-cloud-moon' style='font-size:24px; color:rgb(106, 106, 211);'></i></span>
-        <p style="color:black ;font-size:14px;">Some quick </p>
+        <p style="color:black ;font-size:14px;">{{ ar4s }}%</p>
     </div>
     </div>
   </div>
@@ -633,14 +633,22 @@ export default {
         in: "Select date",
         out: "Select date"
       },
-      avg1: "19",
-      avg2: "22",
-      avg3: "30",
-      avg4: "24",
+      avg1: "0",
+      avg2: "0",
+      avg3: "0",
+      avg4: "0",
       ar1: "0",
       ar2: "0",
       ar3: "0",
       ar4: "0",
+      avg1s: "0",
+      avg2s: "0",
+      avg3s: "0",
+      avg4s: "0",
+      ar1s: "0",
+      ar2s: "0",
+      ar3s: "0",
+      ar4s: "0",
       jsondata: jData
 
     }
@@ -701,6 +709,7 @@ export default {
     checkOut(val) {
       console.log(val.toISOString().slice(0, 10));
       this.dates.out = val.toString().slice(4,16);
+      console.log(this.dates.out);
       //this.dates.out = val.toISOString().slice(0, 10);
     },
 
@@ -713,21 +722,9 @@ export default {
         'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
         'x-rapidapi-key': 'c49cca5c2amsh371fad4eb82cb43p1e10e3jsnc0f8c3454347'
       }
-    };
-      // axios
-      //   .get(
-      //      "http://api.weatherapi.com/v1/forecast.json?key=eb7d27b37d204bbbb2241423213112&q=" +
-      //     this.cty1 +
-      //     "&dt=" +
-      //     this.dates.out   
-      //   )
+     };
       axios.request(options)
         .then(res => {
-          //console.log(res.data.forecast.forecastday[0].hour[0].temp_c);
-          // console.log(res.data.forecast);
-          // var ho = res.data.forecast.forecastday[0].hour;
-          // console.log(ho);
-          //this.weather = res.data.forecast.forecastday[0];
           var sum1=0;
           var sum2=0;
           var sum3=0;
@@ -772,6 +769,66 @@ export default {
         .catch(err => {
           console.log(err);
         });
+
+
+        //strating location
+        var options1 = {
+      method: 'GET',
+      url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
+      params: {q: this.cty, days: '14', dt: this.dates.in},
+      headers: {
+        'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+        'x-rapidapi-key': 'c49cca5c2amsh371fad4eb82cb43p1e10e3jsnc0f8c3454347'
+      }
+     };
+      axios.request(options1)
+        .then(res => {
+          var sum1s=0;
+          var sum2s=0;
+          var sum3s=0;
+          var sum4s=0;
+          var r1s = 0;
+          var r2s = 0;
+          var r3s = 0;
+          var r4s = 0;
+          for(var i =0; i<24; i++) {
+            if(i>=0 && i<6){
+              sum1s= sum1s+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r1s= r1s+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+            }   
+            else if(i>=6 && i<12){
+              sum2s= sum2s+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r2s= r2s+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+            }
+            else if(i>=12 && i<18){
+              sum3s= sum3s+res.data.forecast.forecastday[0].hour[i].temp_c;
+             r3s= r3s+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+            }
+            else if(i>=18 && i<24){
+              sum4s= sum4s+res.data.forecast.forecastday[0].hour[i].temp_c;
+              r4s= r4s+res.data.forecast.forecastday[0].hour[i].chance_of_rain;
+            }
+          }
+          this.avg1s= Math.round(sum1s/6);
+          this.avg2s= Math.round(sum2s/6);
+          this.avg3s= Math.round(sum3s/6);
+          this.avg4s= Math.round(sum4s/6);
+
+          this.ar1s= Math.round(r1s/6);
+          this.ar2s= Math.round(r2s/6);
+          this.ar3s= Math.round(r3s/6);
+          this.ar4s= Math.round(r4s/6);
+          console.log(this.avg1);
+          //console.log(jsonData.place);
+          console.log(res.data.forecast.forecastday[0].hour[0].chance_of_rain);
+          console.log(r1s);
+      
+        })
+        .catch(err => {
+          console.log(err);
+        });
+
+
     }
     
   }
