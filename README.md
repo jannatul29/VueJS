@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-## After cloning this assignment, please follow the steps
+## After cloning this project, please follow the steps
 
 ``` bash
 # install dependencies
