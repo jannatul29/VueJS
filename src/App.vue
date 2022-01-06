@@ -70,21 +70,21 @@
 
         <div class="row no-gutters">
             <div class="col-lg-3 col-md-6">
-              <div class="icon-box" style=" border-radius: 5px;border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal">
+              <div class="icon-box" style=" border-radius: 5px;border-style: outset; height: 200px; text-align: center" data-bs-toggle="modal" data-bs-target="#myModal">
                 <p>Leaving from</p>
                 <p id="p1">{{ ita }}</p>
                 <span id="p2">{{ cty }}</span>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal1">
+            <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px; text-align: center" data-bs-toggle="modal" data-bs-target="#myModal1">
               <p>Going to</p>
               <p id="p1">{{ ita1 }}</p>
               <span id="p2">{{ cty1 }}</span>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px;" data-bs-toggle="modal" data-bs-target="#myModal2">
+          <div class="icon-box" style=" border-radius: 5px; border-style: outset; height: 200px; text-align: center" data-bs-toggle="modal" data-bs-target="#myModal2">
             <p>Departing on</p>
             <span id="p2">{{ dates.in }}</span>
             <hr>
@@ -138,7 +138,7 @@
             <div class="col-lg-3 col-md-6">
               <div class="card" style="width: 1100; background-color:rgb(9, 67, 124);">
                 <div class="card-body">
-                  <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-bars"></i></h3>
+                  <h3 class="card-title" style="color: white; text-align: center"><i class="fas fa-eraser"></i></h3>
                         <p style=" color: white; text-align: center">Check in</p>
                 </div>
           </div>
@@ -187,7 +187,7 @@
       <div class="col-lg-12 col-md-6">
         <!-- <div class="icon-box"> -->
           <!-- <h2 class="title1" style="color: white;">The Best Sedona Hiking Trails</h2> -->
-          <p>{{ dates.out }}, <span class="fw-bold">Forecast for {{ cty1 }}</span></p>
+          <p>{{ dates.in }}, <span class="fw-bold">Forecast for {{ cty }}</span></p>
         <!-- </div> -->
       </div>
     </div>
