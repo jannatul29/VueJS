@@ -16,15 +16,6 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -60,10 +51,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### Responsive Web-Application
 ##### Screenshot No.: 05
-
-
-
-
-
-
-
+![67](https://user-images.githubusercontent.com/69507020/148341747-459c37b9-a0f9-4827-a443-647083de77d5.png)
